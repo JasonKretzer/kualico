@@ -68,3 +68,4 @@ ELEVATOR THOUGHTS to keep in mind while coding:
 
 6) The elevator should be able to handle going directly to a floor without intervening stops for emergency purposes.  Not in the spec, but I think it lends itself to this functionality without inconvenience.
 
+At this point, I am writing too much and coding too little.  I can update the readme in shorter bursts and after the time limit.

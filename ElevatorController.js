@@ -5,11 +5,32 @@ let Elevator = require('./Elevator');
 
 class ElevatorController
 {
+    constructor(min_floor, max_floor, total_elevators, floors_before_maintenance) {
+        this._minFloor = min_floor;
+        this._maxFloor = max_floor;
+        this._totalElevators = total_elevators;
+        this._floors_before_maintenance;
+        
+        this._Elevators = this.initializeElevators(this._totalElevators);
 
+        this.initializeListeners();
+    }
+
+    assignRequest(floor) {
+        
+    }
+
+    getClosestElevator(floor) {
+
+    }
+
+    initializeElevators(totalElevators) {
+        //create the new Elevator objects here
+    }
+
+    initializeListeners() {
+        //set up the listeners for all the Elevator object events
+    }
 }
 
-//quick testing
-console.log(Constants.FLOORS_BEFORE_MAINTENANCE);
-console.log(Constants.MIN_FLOOR);
-console.log(Constants.MAX_FLOOR);
-console.log(Constants.TOTAL_ELEVATORS);
+module.exports = ElevatorController;
