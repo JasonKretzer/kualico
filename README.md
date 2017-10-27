@@ -69,8 +69,21 @@ ELEVATOR THOUGHTS to keep in mind while coding:
 
 4) The ElevatorController inserts floors to stop at in an elevator's destination queue.  A destination is added if the ElevatorController chooses the elevator as the best one to handle a call at the destination.
 
-5) The elevator's destination queue must be checked as it travels to each floor.  If the current floor is in the destination queue, the elevator will stop.
+5) The elevator's destination queue must be checked as it travels to each floor.  If the current floor is in the destination queue, the elevator will stop.  It also looks like I can do some recursion in order process this at each floor.
 
-6) The elevator should be able to handle going directly to a floor without intervening stops for emergency purposes.  Not in the spec, but I think it lends itself to this functionality without inconvenience.
+6) The elevator should be able to handle going directly to a floor without intervening stops for emergency purposes.  Not in the spec, but I think it lends itself to this functionality without inconvenience.  
 
 At this point, I am writing too much and coding too little.  I can update the readme in shorter bursts and after the time limit.
+
+==============================================================  
+Unfortunately, the final commit was a few minutes over the time limit -- got wired in and wanted to finish the maintenance check.  
+
+I did not finish #7 in the spec.
+
+I can see some weaknesses already:  
+--The for loops will always check the first few elevators first for assignments, which means in real life they would be used more and have to have more repairs, etc.  A different selection algorithm would be better.  
+--The error checking is lacking on arguments.  I don't do enough to make sure undefineds are addressed
+===============================================================  
+
+Finally, this should run with a simple   
+node app.js  
