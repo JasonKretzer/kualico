@@ -34,3 +34,13 @@ class ElevatorController
 }
 
 module.exports = ElevatorController;
+let e = new Elevator();
+e.on('doorOpen', () => console.log("door was opened"));
+
+e.answerCall(5);
+console.log(e._currentFloor);
+e.answerCall(2);
+console.log(e._currentFloor);
+e.answerCall(6);
+console.log(e._currentFloor);
+console.log(e._numberOfTrips);
