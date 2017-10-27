@@ -37,6 +37,11 @@ Class Elevator
 => isOccupied  
 => getTrips  
 => putIntoMaintenanceMode  
+=> getCurrentFloor  
+=> goDirectlyToFloor  
+=> destinationQueue  
+=> answerCall  
+=>removeFloorFromDestinations  
 
 COMMIT #2 HERE
 

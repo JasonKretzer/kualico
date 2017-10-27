@@ -86,9 +86,6 @@ class Elevator
 
     //going to a floor with checking the destination queue in between floors
     gotoFloor(floor) {
-        if(!this.checkFloor(floor)) {
-            return false;
-        }
         if(this._currentFloor < floor) {
             this.goDirectlyToFloor(this._currentFloor+1,false);
             this.gotoFloor(floor);
@@ -109,6 +106,9 @@ class Elevator
         return true;
     }
     answerCall(floor) {
+        if(!this.checkFloor(floor)) {
+            return false;
+        }
         if(!this._destinationQueue.includes(floor)) {
             this._destinationQueue.push(floor);
         }        
@@ -118,6 +118,27 @@ class Elevator
         //wait for a few seconds -- not implemented
         this.closeDoor();
         this.removeFloorFromDestinations(this._currentFloor);
+    }
+
+    getCurrentFloor() {
+        return this._currentFloor;
+    }
+
+    putIntoMaintenanceMode() {
+        this._maintenanceMode = true;
+    }
+
+    isDownForMaintenance() {
+        return this._maintenanceMode;
+    }
+
+    restoreFunction() {
+        this._numberOfTrips = 0;
+        this._maintenanceMode = false;
+    }
+
+    getTrips() {
+        return this._numberOfTrips;
     }
 }
 

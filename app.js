@@ -8,3 +8,6 @@ let controller = new ElevatorController(
     Constants.FLOORS_BEFORE_MAINTENANCE
 );
 
+//tell the elevatorcontroller to work from here
+
+
