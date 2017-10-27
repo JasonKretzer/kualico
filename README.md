@@ -75,15 +75,17 @@ ELEVATOR THOUGHTS to keep in mind while coding:
 
 At this point, I am writing too much and coding too little.  I can update the readme in shorter bursts and after the time limit.
 
-==============================================================  
+--
+
 Unfortunately, the final commit was a few minutes over the time limit -- got wired in and wanted to finish the maintenance check.  
 
 I did not finish #7 in the spec.
 
-I can see some weaknesses already:  
+I can see some weaknesses already:
 --The for loops will always check the first few elevators first for assignments, which means in real life they would be used more and have to have more repairs, etc.  A different selection algorithm would be better.  
 --The error checking is lacking on arguments.  I don't do enough to make sure undefineds are addressed
-===============================================================  
+
+--
 
 Finally, this should run with a simple   
 node app.js  
