@@ -49,3 +49,22 @@ Filled out the constants object and created the ElevatorController.js and Elevat
 
 COMMIT #3 HERE
 
+ELEVATOR THOUGHTS to keep in mind while coding:
+1) To pick people up, the elevator must:  
+-- go to the appropriate floor  
+-- stop at the appropriate floor  
+-- open the door  
+-- stay open until all are in (will not be implemented)  
+-- close the door  
+-- wait for a destination or other command (if people do not give a destination)  
+
+2) Before the elevator can move between floors, the doors must be closed  
+
+3) The elevator must keep a queue of floors that it must stop at, either because it was called there or because the passengers pushed a button.
+
+4) The ElevatorController inserts floors to stop at in an elevator's destination queue.  A destination is added if the ElevatorController chooses the elevator as the best one to handle a call at the destination.
+
+5) The elevator's destination queue must be checked as it travels to each floor.  If the current floor is in the destination queue, the elevator will stop.
+
+6) The elevator should be able to handle going directly to a floor without intervening stops for emergency purposes.  Not in the spec, but I think it lends itself to this functionality without inconvenience.
+
